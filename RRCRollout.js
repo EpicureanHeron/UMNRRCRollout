@@ -132,9 +132,9 @@ function RRCRollout(RRC, RRCContacts) {
 
     //Should be the U Travel Council Core member list who will have access to all folders
     
-    var editorArr = ['jfthor@umn.edu', 'bethtapp@umn.edu', 'rgronfor@umn.edu', 'schle570@umn.edu', 'c-meye1@umn.edu']
+    var editorArr = ['example@email.com', 'example@email.com']
     
-    //var editorArr = ['jfthor@umn.edu']
+
 
     //creates an array of email addresses based on the breaking character of ", "
     var RRCContactsArr = RRCContacts.split(", ")
@@ -331,10 +331,10 @@ function RRCRollout(RRC, RRCContacts) {
         htmlBody: completeHTML
 
     })
-    var finishRolloutHtml = "<p>Rollout for " + RRC + " is almost complete! Please navigate <a href='" + RRCquestionlog.getUrl() + "'>HERE</a> with the Travel@umn.edu account and enable the Triggers menu item (it may take a second to load)."
-    finishRolloutHtml += " Then select 'Click to run trigger set up'. It should ask for authorization for several Google services to run for the Travel@umn.edu account. Thanks!</p>"
+    var finishRolloutHtml = "<p>Rollout for " + RRC + " is almost complete! Please navigate <a href='" + RRCquestionlog.getUrl() + "'>HERE</a> with the <email> account and enable the Triggers menu item (it may take a second to load)."
+    finishRolloutHtml += " Then select 'Click to run trigger set up'. It should ask for authorization for several Google services to run for the <email> account. Thanks!</p>"
     MailApp.sendEmail({
-        to: 'travel@umn.edu',
+        to: '<email>',
         subject: 'One more step to finish rollout for ' + RRC,
         htmlBody: finishRolloutHtml
 
